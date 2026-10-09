@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Sample Geospatial Data</name>
+    <description>A simple KML file for testing measurement capabilities.</description>
+    
+    <Placemark>
+      <name>Sample Point</name>
+      <description>A single point (no measurements expected).</description>
+      <Point>
+        <coordinates>-122.0822035425683,37.42228990140251,0</coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Sample Path</name>
+      <description>A line string to measure length.</description>
+      <LineString>
+        <coordinates>
+          -122.08220,37.42228,0
+          -122.08230,37.42238,0
+          -122.08240,37.42248,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+
+    <Placemark>
+      <name>Sample Area</name>
+      <description>A polygon to measure area.</description>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              -122.084,37.422,0
+              -122.084,37.423,0
+              -122.083,37.423,0
+              -122.083,37.422,0
+              -122.084,37.422,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+    
+  </Document>
+</kml>

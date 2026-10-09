@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geospatial File Measurement UI</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Geospatial File Measurement</h1>
+
+      <div class="panel">
+        <label for="apiBase">API Base URL</label>
+        <input id="apiBase" type="text" value="http://localhost:8080" />
+
+        <form id="uploadForm">
+          <label for="fileInput">Upload geospatial file</label>
+          <input id="fileInput" type="file" accept=".zip,.kml,.kmz" required />
+          <button type="submit">Upload and Measure</button>
+        </form>
+      </div>
+
+      <div id="status" class="status">Waiting for a file upload.</div>
+
+      <section class="panel">
+        <h2>File Metadata</h2>
+        <pre id="fileMetadata">No file processed yet.</pre>
+      </section>
+
+      <section class="panel">
+        <h2>Measurements</h2>
+        <div id="measurements" class="measurements-empty">No measurements available.</div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
